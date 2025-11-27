@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROID - Anime Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">DROID</div>
+            <nav class="menu-categories">
+                <a href="#" class="menu-item">MENU CATEGORIES</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="">
+                <button class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="profile-icon">
+                <img src="./images/people_15675853.png" alt="Profile" class="avatar">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Background Image Carousel -->
+        <div class="hero-background">
+            <img src="./images/background1.jpg" alt="Hero Background" class="background-img" id="carouselImg">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-wrapper">
+            <div class="content-left">
+                <h1 class="anime-title">SOUSOU NO FRIRENS BEYOND JOURNEYS:END'S</h1>
+                
+                <div class="action-buttons">
+                    <button class="play-btn">
+                        <span class="play-icon">▶</span>
+                        <span class="play-text">PLAY</span>
+                    </button>
+                    <button class="add-list-btn">
+                        <span class="plus-icon">+</span>
+                        <span class="add-text">ADD TO LIST</span>
+                    </button>
+                </div>
+
+                <div class="description">
+                    <p>LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE <span class="highlight">MAGNA ALIQUA</span>. QUIS IPSUM SUSPENDISSE ULTRICES GRAVIDA. RISUS COMMODO VIVERRA MAECENAS ACCUMSAN LACUS VEL FACILISIS.</p>
+                </div>
+
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">9.7</span>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+    <script>
+        // Image carousel configuration
+        const backgroundImages = [
+            './images/1355193.jpeg',
+            './images/1355194.jpeg'
+        ];
+
+        let currentImageIndex = 0;
+        const carouselImg = document.getElementById('carouselImg');
+
+        function changeBackground() {
+            carouselImg.style.opacity = '0';
+            setTimeout(() => {
+                currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+                carouselImg.src = backgroundImages[currentImageIndex];
+                carouselImg.style.opacity = '1';
+            }, 300);
+        }
+
+        setInterval(changeBackground, 5000);
+    </script>
+</body>
+</html>
