@@ -8,6 +8,8 @@
 
 # Jangan abaikan file .gitignore itu sendiri
 !.gitignore
+!package.json
+
 
 # Logs
 logs
